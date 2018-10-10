@@ -78,7 +78,60 @@
   			</tbody>
   		</table>
     </div>
-    </div>
 
+    <div>
+      <h2>Password Verification</h2>
+
+      <form action = " " onsubmit="return checkPassStrength()" >
+        Username:<br>
+        <input id = "name" >
+        <br>
+        Password:<br>
+        <input id = "pass">
+        <br><br>
+        <input type="submit" value="Submit">
+      </form>
+
+      <p id = "strength"></p>
+
+      <script>
+        function checkPassStrength() {
+          var score = scorePassword();
+          var text = "";
+          var allowSubmit;
+          if (score >= 15){
+              alert ("Navigating to login page.");
+              allowSubmit = true;
+          }
+          else if (score >= 10){
+              text = "good";
+              allowSubmit = false;
+          }
+          else if (score >= 5){
+              text = "weak";
+              allowSubmit = false;
+          }
+          else {
+              text = "TOO SHORT"
+              allowSubmit = false;
+          }
+
+          document.getElementById("strength").innerHTML = text;
+          return allowSubmit;
+        }
+
+        function scorePassword() {
+          var pass = document.getElementById("pass").value;
+          var score = 0;
+          if (!pass)
+              return score;
+
+          score = pass.length;
+          return score;
+        }
+
+        </script>
+            </div>
+      </div>
 
 </body>
