@@ -1,14 +1,16 @@
 <head>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Add Charts.js cdn here and Javascript file links at the bottom of file-->
+
 	<link rel="stylesheet" href="Styles.css">
 	
 </head>
 
 <body style="background: url('https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg');background-attachment: fixed; background-size: 100%">
 
-  <!-- this is a comment-->
   <div class="container-fluid">
     <nav class="navbar navbar-default affix" data-offset-top="0">
         <div class="container-fluid">
@@ -48,7 +50,7 @@
           	<div class = "row">
             	<img src="http://images.mentalfloss.com/sites/default/files/styles/mf_image_16x9/public/space.png?itok=O8RXwdUw&resize=1100x619g" style="max-width: 90%;">
             	<p> As you can probably tell, Chris has a rather unique taste in pictures. He tries to work on it. </p>
-			</div>
+			      </div>
           </div>
           <div class="col-md-4">
             <img src="https://pbs.twimg.com/profile_images/433345090585493504/qqhlO4Qg.jpeg" style="max-width: 90%;">
@@ -78,60 +80,9 @@
   			</tbody>
   		</table>
     </div>
+  </div>
 
-    <div>
-      <h2>Password Verification</h2>
+  <!-- Add Script links for our Javascript files -->
 
-      <form action = " " onsubmit="return checkPassStrength()" >
-        Username:<br>
-        <input id = "name" >
-        <br>
-        Password:<br>
-        <input id = "pass">
-        <br><br>
-        <input type="submit" value="Submit">
-      </form>
-
-      <p id = "strength"></p>
-
-      <script>
-        function checkPassStrength() {
-          var score = scorePassword();
-          var text;
-          var allowSubmit;
-          if (score >= 15){
-              alert ("Navigating to login page.");
-              allowSubmit = true;
-          }
-          else if (score >= 10){
-              text = "ok";
-              allowSubmit = false;
-          }
-          else if (score >= 5){
-              text = "weak";
-              allowSubmit = false;
-          }
-          else {
-              text = "too short";
-              allowSubmit = false;
-          }
-
-          document.getElementById("strength").innerHTML = text;
-          return allowSubmit;
-        }
-
-        function scorePassword() {
-          var pass = document.getElementById("pass").value;
-          var score = 0;
-          if (!pass)
-              return score;
-
-          score = pass.length;
-          return score;
-        }
-
-        </script>
-            </div>
-      </div>
 
 </body>
