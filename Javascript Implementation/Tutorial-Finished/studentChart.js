@@ -9,12 +9,12 @@ var myChart = new Chart(context, {
 
 	// Assign the Data
 	data:{
-		labels: ['Red', 'Blue', "Yellow", 'Green'],
+		labels: ["Red", 'Blue', "Yellow", 'Green'],
 		datasets:[{
 			label: '# of Votes',
 			data: [12,19,3,5],
 
-			backgroundColor: ['green','yellow','blue', 'red' ]
+			backgroundColor: ['#A393BF','#73648A','#453750', '#480355' ]
 
 		}]
 	},
@@ -22,7 +22,18 @@ var myChart = new Chart(context, {
 	// Chart Options 
 
 	options:{
-		
+		legend: {
+			display: false
+		},
+
+		title: {
+			display: true,
+
+			text: 'Number of Votes',
+
+			fontSize: 22,
+
+		}
 	}
 
 
@@ -42,9 +53,9 @@ var myChart2 = new Chart(context2,{
 		datasets:[{
 
 			label: "Population (Millions)",
-			backgroundColor: ['red', 'green', 'purple', 'yellow'],
+			backgroundColor: ['purple', 'green', 'red', 'yellow'],
 
-			data: [2478,5367,735,800]
+			data: [735,2478,5367,800]
 		}]
 	},
 
@@ -53,7 +64,9 @@ var myChart2 = new Chart(context2,{
 		title: {
 			display: true,
 
-			text: 'Predicted World Population in 2040'
+			text: 'Predicted World Population in 2040',
+
+			fontSize: 22
 
 		}
 		
