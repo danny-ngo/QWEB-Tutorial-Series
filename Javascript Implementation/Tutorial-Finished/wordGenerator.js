@@ -31,8 +31,9 @@ function alterDisplayWord(){
         
 		if(displayWord.length == 0){ // if there is no word being displayed (this means that a word was just deleted)
             
+            // move to the next word
             if(wordIndex == wordArray.length-1)
-			     wordIndex = 0; // move to the next word
+			     wordIndex = 0;
             else
                 wordIndex++;
             
