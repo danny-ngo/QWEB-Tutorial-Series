@@ -9,9 +9,9 @@ var myChart = new Chart(context, {
 
 	// Assign the Data
 	data:{
-		labels: ["Red", 'Blue', "Yellow", 'Green'],
+		labels: ["First", 'Second', "Third", 'Fourth'],
 		datasets:[{
-			label: '# of Votes',
+			
 			data: [12,19,3,5],
 
 			backgroundColor: ['#A393BF','#73648A','#453750', '#480355' ]
