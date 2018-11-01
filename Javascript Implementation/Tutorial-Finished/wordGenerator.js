@@ -31,7 +31,11 @@ function alterDisplayWord(){
         
 		if(displayWord.length == 0){ // if there is no word being displayed (this means that a word was just deleted)
             
-			wordIndex = (wordIndex == wordArray.length-1 ? 0:wordIndex+1); // move to the next word
+            if(wordIndex == wordArray.length-1)
+			     wordIndex = 0; // move to the next word
+            else
+                wordIndex++;
+            
             wordIncrement = 1; // change to the generating word increment
             setTimeout(alterDisplayWord,changeWordTime); // set a short time for the next call of the function
         
