@@ -2,13 +2,27 @@
 module.exports = function(app, passport){
 
 	app.get('/', function(req,res){
-		console.log('test');
-		res.render('index',{name:'Chris Payne Can Eat Shit',body:'Yes... yes he can.'});
+		res.render('login');
 	});
 
+
+	app.post('/login', function(req,res){
+
+	});
+
+	app.get('/signup',function(req,res){
+		res.render('signup');
+	});
 
 	app.get(function(req,res){
-		res.render('index');
+		res.render('login');
 	});
+
+	function isLoggedIn(req,res,next){
+    	if (req.isAuthenticated())
+        	return next();
+    	
+    	res.redirect('/');
+	}
 
 }
